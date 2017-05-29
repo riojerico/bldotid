@@ -1,0 +1,16 @@
+RewriteEngine On
+#RewriteRule ^a?$ views/index.php
+RewriteRule ^logout?$ login/logout.php
+
+#RewriteRule ^index/([0-9A-Za-z]+)$ views/index.php
+#RewriteRule ^index/atribut/([0-9A-Za-z]+)$ pages/admin/index.php?pages=atribut&id=$1
+
+#### Rule for Error Page - 404 ####
+#ErrorDocument 404 http://www.domain.com/404.html
+ErrorDocument 402 http://localhost/rodjoland/buatlapak/admin/login
+ErrorDocument 403 http://localhost/rodjoland/buatlapak/admin/login
+ErrorDocument 500 http://localhost/rodjoland/buatlapak/admin/login
+ErrorDocument 404 http://localhost/rodjoland/buatlapak/admin/login
+
+# disable directory browsing
+Options -Indexes
